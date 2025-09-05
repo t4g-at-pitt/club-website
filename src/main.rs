@@ -1,6 +1,11 @@
 pub mod home;
 pub mod blog;
+pub mod about;
+pub mod contact;
+
+use about::About;
 use home::Home;
+use contact::Contact;
 use blog::Blog;
 use dioxus::prelude::*;
 
@@ -11,6 +16,10 @@ enum Route {
     #[layout(MainLayout)]
         #[route("/")]
         Home {},
+        #[route("/about")]
+        About {},
+        #[route("/contact")]
+        Contact {},
         #[route("/blog/:id")]
         Blog { id: i32 },
 }
@@ -65,8 +74,8 @@ fn Navbar() -> Element {
             div { class:"ml-auto mr-2 space-x-4 items-center justify-center",
                 Link { class:"text-xl text-blue-950 hover:underline", to: Route::Home {}, "Home" },
                 Link { class:"text-xl text-blue-950 hover:underline", to: "https://github.com/t4g-at-pitt", new_tab: true, "Projects" },
-                Link { class:"text-xl text-blue-950 hover:underline", to: Route::Home {}, "Contact" },
-                Link { class:"text-xl text-blue-950 hover:underline", to: Route::Home {}, "About" },
+                Link { class:"text-xl text-blue-950 hover:underline", to: Route::Contact {}, "Contact" },
+                Link { class:"text-xl text-blue-950 hover:underline", to: Route::About {}, "About" },
                 // Link { class:"text-xl", to: Route::Blog { id: 1 }, "Blog" }
             }
         }
