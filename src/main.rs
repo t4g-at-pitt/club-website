@@ -2,6 +2,10 @@ pub mod home;
 pub mod blog;
 pub mod about;
 pub mod contact;
+pub mod models;
+mod state;
+
+pub mod components;
 
 use about::About;
 use home::Home;
@@ -67,7 +71,7 @@ fn Navbar() -> Element {
 
             // Main logo / title of navbar
             h1 { class:"mr-4 ml-2 text-3xl font-semibold text-black",
-                "Technology for Good @ Pitt"
+                "T4G @ Pitt"
             }
 
             // list of links
