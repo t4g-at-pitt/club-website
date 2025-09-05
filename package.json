@@ -1,5 +1,13 @@
+
 {
+  "name": "t4g",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "dx build --release && npx tailwindcss -i ./assets/tailwind.css -o ./target/dx/t4g/release/web/public/tailwind.css --minify",
+    "deploy": "node deploy.js"
+  },
   "devDependencies": {
+    "fs-extra": "^11.1.1",
     "@tailwindcss/typography": "^0.5.16"
   }
 }
