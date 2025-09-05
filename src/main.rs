@@ -1,6 +1,5 @@
 pub mod home;
 pub mod blog;
-
 use home::Home;
 use blog::Blog;
 use dioxus::prelude::*;
@@ -55,19 +54,19 @@ fn Navbar() -> Element {
     rsx! {
         div {
             id: "navbar",
-            class:"sticky top-0 z-10 p-2 flex flex-row bg-blue-200 border",
+            class:"sticky top-0 z-10 p-2 flex flex-row bg-blue-100 border items-center justify-center",
 
             // Main logo / title of navbar
-            p { class:"text-2xl mr-4 ml-2 font-semibold",
+            h1 { class:"mr-4 ml-2 text-3xl font-semibold text-black",
                 "Technology for Good @ Pitt"
             }
 
             // list of links
-            div { class:"ml-auto space-x-4",
-                Link { class:"text-xl", to: Route::Home {}, "Home" },
-                Link { class:"text-xl", to: "https://github.com/t4g-at-pitt", new_tab: true, "Projects" },
-                Link { class:"text-xl", to: Route::Home {}, "Contact" },
-                Link { class:"text-xl", to: Route::Home {}, "About" },
+            div { class:"ml-auto mr-2 space-x-4 items-center justify-center",
+                Link { class:"text-xl text-blue-950 hover:underline", to: Route::Home {}, "Home" },
+                Link { class:"text-xl text-blue-950 hover:underline", to: "https://github.com/t4g-at-pitt", new_tab: true, "Projects" },
+                Link { class:"text-xl text-blue-950 hover:underline", to: Route::Home {}, "Contact" },
+                Link { class:"text-xl text-blue-950 hover:underline", to: Route::Home {}, "About" },
                 // Link { class:"text-xl", to: Route::Blog { id: 1 }, "Blog" }
             }
         }

@@ -3,7 +3,7 @@
 [web.app]
 
 # HTML title tag content
-title = "t4g"
+title = "T4G @ Pitt"
 
 # include `assets` in web platform
 [web.resource]
