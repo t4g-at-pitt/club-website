@@ -1,29 +1,47 @@
-use dioxus::prelude::*;
-use crate::state::use_events_sorted;
 use crate::components::event_list::EventList;
+use crate::state::use_events_sorted;
+use dioxus::prelude::*;
 
 #[component]
 fn Hero() -> Element {
-
     rsx! {
-        div { class: "p-8 bg-yellow-50 min-h-screen",
+            div { class: "p-8 bg-yellow-50 min-h-screen",
 
-            div { class:"flex flex-row justify-around",
-                div { class:"flex flex-col max-w-lg prose ",
-                    h1 { class:"text-4xl font-bold text-gray-900 mb-4",
-                        "Technology for good",
-                    }
-                    p { class:"text-lg font-medium text-gray-800 mb-4 p-4 bg-white border rounded-xl flex flex-col shadow-sm hover:shadow-md transition-shadow",
-                        "Technology for Good (T4G) is dedicated to growing the responsible technology community through learning, career growth, and research enrichment. The organization hosts events centered on hands-on development, understanding the responsible technology landscape, and bettering understanding of research and graduate school opportunities.",
-                    }
-                }
+                div { class:"flex flex-row justify-around",
+                    div {
+        class: "flex flex-col max-w-lg prose-stone",
+        h1 {
+            class: "text-4xl font-bold text-gray-900 mb-4",
+            "Technology for Good",
+        }
+        p {
+        class: "text-lg text-gray-800 mb-4 p-6 bg-white border rounded-xl shadow-sm hover:shadow-md transition-shadow",
 
-                div { class:"w-xl max-w-3xl",
-                    EventList {}
+            "The organization ",
+            span { class: "font-bold text-gray-900", "Technology for Good (T4G)" },
+            " is dedicated to growing the ",
+            span { class: "font-semibold text-indigo-600", "responsible technology community" },
+            " through learning, ",
+            span { class: "font-semibold", "career growth" },
+            ", and ",
+            span { class: "font-semibold", "research enrichment" },
+            ". The organization hosts events centered on ",
+            span { class: "italic", "hands-on development" },
+            ", understanding the ",
+            span { class: "underline text-indigo-500", "responsible technology landscape" },
+            ", and better understanding of research and graduate school opportunities. 🚀💡"
+
+    }
+
+
+    }
+
+                    div { class:"w-xl max-w-3xl",
+                        EventList {}
+                    }
                 }
             }
         }
-    }
 }
 
 #[component]

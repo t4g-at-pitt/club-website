@@ -19,6 +19,8 @@
     --color-blue-800: oklch(42.4% 0.199 265.638);
     --color-blue-900: oklch(37.9% 0.146 265.522);
     --color-blue-950: oklch(28.2% 0.091 267.935);
+    --color-indigo-500: oklch(58.5% 0.233 277.117);
+    --color-indigo-600: oklch(51.1% 0.262 276.966);
     --color-gray-500: oklch(55.1% 0.027 264.364);
     --color-gray-600: oklch(44.6% 0.03 256.802);
     --color-gray-700: oklch(37.3% 0.034 259.733);
@@ -710,6 +712,9 @@
   .grid {
     display: grid;
   }
+  .inline {
+    display: inline;
+  }
   .table {
     display: table;
   }
@@ -845,6 +850,9 @@
   .p-4 {
     padding: calc(var(--spacing) * 4);
   }
+  .p-6 {
+    padding: calc(var(--spacing) * 6);
+  }
   .p-8 {
     padding: calc(var(--spacing) * 8);
   }
@@ -924,6 +932,12 @@
   .text-gray-900 {
     color: var(--color-gray-900);
   }
+  .text-indigo-500 {
+    color: var(--color-indigo-500);
+  }
+  .text-indigo-600 {
+    color: var(--color-indigo-600);
+  }
   .text-yellow-800 {
     color: var(--color-yellow-800);
   }
@@ -945,6 +959,44 @@
     transition-property: box-shadow;
     transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
     transition-duration: var(--tw-duration, var(--default-transition-duration));
+  }
+  .prose-stone {
+    --tw-prose-body: oklch(37.4% 0.01 67.558);
+    --tw-prose-headings: oklch(21.6% 0.006 56.043);
+    --tw-prose-lead: oklch(44.4% 0.011 73.639);
+    --tw-prose-links: oklch(21.6% 0.006 56.043);
+    --tw-prose-bold: oklch(21.6% 0.006 56.043);
+    --tw-prose-counters: oklch(55.3% 0.013 58.071);
+    --tw-prose-bullets: oklch(86.9% 0.005 56.366);
+    --tw-prose-hr: oklch(92.3% 0.003 48.717);
+    --tw-prose-quotes: oklch(21.6% 0.006 56.043);
+    --tw-prose-quote-borders: oklch(92.3% 0.003 48.717);
+    --tw-prose-captions: oklch(55.3% 0.013 58.071);
+    --tw-prose-kbd: oklch(21.6% 0.006 56.043);
+    --tw-prose-kbd-shadows: NaN NaN NaN;
+    --tw-prose-code: oklch(21.6% 0.006 56.043);
+    --tw-prose-pre-code: oklch(92.3% 0.003 48.717);
+    --tw-prose-pre-bg: oklch(26.8% 0.007 34.298);
+    --tw-prose-th-borders: oklch(86.9% 0.005 56.366);
+    --tw-prose-td-borders: oklch(92.3% 0.003 48.717);
+    --tw-prose-invert-body: oklch(86.9% 0.005 56.366);
+    --tw-prose-invert-headings: #fff;
+    --tw-prose-invert-lead: oklch(70.9% 0.01 56.259);
+    --tw-prose-invert-links: #fff;
+    --tw-prose-invert-bold: #fff;
+    --tw-prose-invert-counters: oklch(70.9% 0.01 56.259);
+    --tw-prose-invert-bullets: oklch(44.4% 0.011 73.639);
+    --tw-prose-invert-hr: oklch(37.4% 0.01 67.558);
+    --tw-prose-invert-quotes: oklch(97% 0.001 106.424);
+    --tw-prose-invert-quote-borders: oklch(37.4% 0.01 67.558);
+    --tw-prose-invert-captions: oklch(70.9% 0.01 56.259);
+    --tw-prose-invert-kbd: #fff;
+    --tw-prose-invert-kbd-shadows: 255 255 255;
+    --tw-prose-invert-code: #fff;
+    --tw-prose-invert-pre-code: oklch(86.9% 0.005 56.366);
+    --tw-prose-invert-pre-bg: rgb(0 0 0 / 50%);
+    --tw-prose-invert-th-borders: oklch(44.4% 0.011 73.639);
+    --tw-prose-invert-td-borders: oklch(37.4% 0.01 67.558);
   }
   .hover\:underline {
     &:hover {
