@@ -28,7 +28,7 @@ project/
 ├─ src/
 │  └─ main.rs       # Application entry point and components
 ├─ Cargo.toml       # Rust dependencies and project configuration
-├─ tailwind.css     # Tailwind input file
+├─ input.css     # Tailwind input file
 └─ tailwind.config.js # Tailwind configuration (if present)
 ```
 
@@ -42,12 +42,12 @@ project/
 
 2. **Install Tailwind CSS CLI**
    ```bash
-   npm install -D tailwindcss
+   npm install tailwindcss @tailwindcss/cli
    ```
 
 3. **Start Tailwind CSS compiler** (in one terminal)
    ```bash
-   npx tailwindcss -i ./tailwind.css -o ./assets/tailwind.css --watch
+   npx tailwindcss -i ./input.css -o ./assets/tailwind.css --watch
    ```
    Keep this running while developing to automatically rebuild styles.
 
@@ -113,3 +113,4 @@ We welcome contributions from club members and the broader community! Here's how
 ---
 
 **Happy coding! 🚀** Let's build something amazing together for Tech4Good!
+
