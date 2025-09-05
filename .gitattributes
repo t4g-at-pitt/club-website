@@ -1,0 +1,9 @@
+# Force LF endings for all Rust and config files
+*.rs text eol=lf
+*.toml text eol=lf
+*.json text eol=lf
+*.css text eol=lf
+*.html text eol=lf
+
+# Leave binaries alone
+*.wasm binary

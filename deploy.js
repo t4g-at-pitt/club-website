@@ -2,65 +2,63 @@ const { execSync } = require("child_process");
 const fs = require("fs-extra");
 const path = require("path");
 
-// Paths
-const OUTPUT = path.join(__dirname, "target", "dx", "t4g", "release", "web", "public");
-const TMP_DIR = path.join(__dirname, "_deploy_tmp");
-
+// Utility to run commands
 function run(cmd) {
     execSync(cmd, { stdio: "inherit" });
 }
 
+// Paths
+const mainBranch = "main";
+const ghPagesBranch = "gh-pages";
+const buildDir = path.join("target", "dx", "t4g", "release", "web", "public");
+const tmpDir = "_deploy_tmp";
+
 function main() {
-    // 1️⃣ Make sure we're on main branch
-    const branch = execSync("git branch --show-current").toString().trim();
-    if (branch !== "main") {
-        console.error("❌ You must run this deploy script from the main branch!");
-        process.exit(1);
-    }
-
-    // 2️⃣ Make sure working directory is clean
-    const status = execSync("git status --porcelain").toString().trim();
-    if (status) {
-        console.error("❌ Please commit or stash your changes before deploying:\n", status);
-        process.exit(1);
-    }
-
-    // 3️⃣ Build Rust + Tailwind
-    run("dx build --release");
-    run("npx tailwindcss -i ./assets/tailwind.css -o ./target/dx/t4g/release/web/public/tailwind.css --minify");
-
-    // 4️⃣ Copy output to temporary folder
-    fs.removeSync(TMP_DIR);
-    fs.mkdirSync(TMP_DIR, { recursive: true });
-    fs.copySync(OUTPUT, TMP_DIR);
-
-    // 5️⃣ Switch to gh-pages
-    run("git checkout gh-pages");
-
-    // 6️⃣ Remove old files but keep .git
-    fs.readdirSync(__dirname).forEach(f => {
-        if (f !== ".git") fs.removeSync(path.join(__dirname, f));
-    });
-
-    // 7️⃣ Copy new build from temp
-    fs.copySync(TMP_DIR, __dirname);
-
-    // 8️⃣ Commit & push
-    run("git add .");
     try {
-        run(`git commit -m "Deploy ${new Date().toISOString()}"`);
-    } catch {
-        console.log("ℹ️ No changes to commit");
+        // Build the project
+        console.log("🚀 Building project...");
+        run("dx build --release");
+
+        // Make sure the build folder exists
+        if (!fs.existsSync(buildDir)) {
+            console.error(`❌ Build folder does not exist: ${buildDir}`);
+            process.exit(1);
+        }
+
+        // Stash any tracked changes (like Cargo.toml CRLF changes)
+        console.log("💾 Stashing tracked changes...");
+        run("git stash push -k -u || echo 'No tracked changes to stash'");
+
+        // Switch to gh-pages branch (create if doesn't exist)
+        try {
+            run(`git checkout ${ghPagesBranch}`);
+        } catch {
+            run(`git checkout -b ${ghPagesBranch}`);
+        }
+
+        // Clear old contents except .git
+        fs.readdirSync(".")
+            .filter(f => f !== ".git")
+            .forEach(f => fs.rmSync(f, { recursive: true, force: true }));
+
+        // Copy build output to root
+        console.log(`📂 Copying build files from ${buildDir}...`);
+        fs.copySync(buildDir, ".", { overwrite: true });
+
+        // Commit and push
+        run('git add .');
+        run('git commit -m "Deploy site" || echo "No changes to commit"');
+        run(`git push origin ${ghPagesBranch}`);
+
+        // Switch back to main and pop stash
+        run(`git checkout ${mainBranch}`);
+        run("git stash pop || echo 'No stashed changes to pop'");
+
+        console.log("✅ Deployment complete!");
+    } catch (err) {
+        console.error("❌ Deployment failed:", err);
+        process.exit(1);
     }
-    run("git push origin gh-pages --force");
-
-    // 9️⃣ Clean up temp
-    fs.removeSync(TMP_DIR);
-
-    // 🔟 Switch back to main
-    run("git checkout main");
-
-    console.log("✅ Deployment complete!");
 }
 
 main();
