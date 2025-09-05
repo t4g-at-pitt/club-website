@@ -1,6 +1,5 @@
 pub mod home;
 pub mod blog;
-
 use home::Home;
 use blog::Blog;
 use dioxus::prelude::*;
