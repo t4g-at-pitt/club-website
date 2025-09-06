@@ -6,7 +6,9 @@ use dioxus::prelude::*;
 #[component]
 pub fn Hero() -> Element {
     rsx! {
-        div { class: "p-10 bg-yellow-50",
+        div { class:"z-[-2] bg-yellow-50 bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:6rem_4rem]",
+
+        div { class: "p-10",
 
             div { class:"flex flex-col md:flex-row justify-around gap-y-8 md:gap-x-8",
                 div {
@@ -36,6 +38,7 @@ pub fn Hero() -> Element {
                         EventList {}
                     }
                 }
+            }
         }
     }
 }
