@@ -6,19 +6,29 @@ use dioxus::prelude::*;
 #[component]
 pub fn Hero() -> Element {
     rsx! {
-        div { class:"z-[-2] bg-yellow-50 bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:6rem_4rem]",
+        // outer hero container
+        div {
+            class: "overflow-x-hidden min-h-[80vh] flex flex-col justify-center
+                    bg-yellow-50
+                    bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)]
+                    bg-[size:6rem_4rem]",
 
-        div { class: "p-10",
+            div { class: "p-10 lg:p-16 flex flex-col md:flex-row justify-center items-center gap-y-8 md:gap-x-12 w-full",
 
-            div { class:"flex flex-col md:flex-row justify-around gap-y-8 md:gap-x-8",
+                // Left text column
                 div {
-                    class: "flex flex-col max-w-sm lg:max-w-lg prose-stone",
+                    class: "flex flex-col max-w-sm lg:max-w-xl prose-stone",
                     h1 {
-                        class: "text-4xl font-bold text-gray-900 mb-4",
-                        "Technology for Good",
+                        class: "text-4xl font-bold text-gray-900 mb-2",
+                        "Technology for Good"
+                    }
+                    h1 {
+                        class: "text-2xl font-medium text-gray-700 mb-3",
+                        "at the University of Pittsburgh"
                     }
                     p {
-                        class: "text-lg text-gray-800 mb-4 p-6 bg-white border rounded-xl shadow-sm hover:shadow-md transition-shadow",
+                        class: "text-lg lg:text-xl text-gray-800 mb-4 p-6 bg-white border
+                                rounded-xl shadow-sm hover:shadow-md transition-shadow",
                         "The organization ",
                         span { class: "font-bold text-gray-900", "Technology for Good (T4G)" },
                         " is dedicated to growing the ",
@@ -34,9 +44,10 @@ pub fn Hero() -> Element {
                         ", and better understanding of research and graduate school opportunities. 🚀💡"
                     }
                 }
-                div { class:"w-xl max-w-3xl",
-                        EventList {}
-                    }
+
+                // Right event list
+                div { class:"w-full max-w-3xl",
+                    EventList {}
                 }
             }
         }

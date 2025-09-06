@@ -35,6 +35,7 @@ fn App() -> Element {
     rsx! {
         document::Link { rel: "stylesheet", href: TAILWIND_CSS },
         document::Link{ rel: "favicon", href: FAV_ICON},
+        document::Meta{name: "description", content:"Club website for T4G @ Pitt."}
         Router::<Route> {}
     }
 }

@@ -2,8 +2,16 @@ use dioxus::prelude::*;
 #[component]
 pub fn Footer() -> Element {
     rsx! {
-        div { class:"p-10 bg-green-100 bg-[radial-gradient(theme(colors.blue.200)_1px,transparent_1px)] [background-size:16px_16px] flex justify-left items-center border-t border-gray-500",
+        div { class:"relative p-10 bg-green-100 bg-[radial-gradient(theme(colors.blue.200)_1px,transparent_1px)] [background-size:16px_16px] flex justify-left items-center border-t border-gray-500",
             footer {
+                // link to source code
+                a {
+                    href: "https://github.com/t4g-at-pitt/club-website",
+                    target: "_blank",
+                    code { class:"text-sm absolute right-6 bottom-6 opacity-50 hover:opacity-80",
+                        "source code"
+                    }
+                }
                 ul { class:"gap-y-1 flex flex-col w-fit",
                     h2 { class:"text-3xl mb-4 font-bold", "Connect with us!" }
                     li {
