@@ -1,14 +1,14 @@
 {
-  "Our Values": {
-      "description": "This is a description of the first item."
+  "Responsible Technology": {
+      "description": "Through partnering with All Tech Is Human (ATIH), T4G focuses on spreading awareness and increasing engagement with responsible technology – technology for human betterment (or “tech for good”)."
   },
   "Getting Involved": {
-    "description": "This is a description of the first item."
+    "description": "We offer weekly meetings for all members of the Pitt community to attend, no matter the major. Beyond meetings, our club hosts online projects that anyone can contribute to year round."
   },
   "Research": {
-    "description": "This is a description of the first item."
+    "description": "Investigating the world through research is a core value of T4G. Through research focused workshops and discussions featuring graduate students and faculty, our club offers resources to become oriented with technical research."
   },
   "Projects": {
-    "description": "This is a description of the first item."
+    "description": "Small, single- or multi-meeting projects where undergraduates can gain experience working on real bite-sized industry and research problems, from start to finish. Past mini projects have included evaluating LLM security via automated jailbreaking, building a hate speech classifier for social media data, and understanding the needs for evaluating data ethicality across major tech industries."
   }
 }
