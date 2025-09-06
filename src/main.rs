@@ -1,17 +1,10 @@
-pub mod home;
-pub mod blog;
-pub mod about;
-pub mod contact;
+pub mod pages;
 pub mod models;
 pub mod state;
-
 pub mod components;
 
-use about::About;
-use home::Home;
-use contact::Contact;
-use blog::Blog;
 use dioxus::prelude::*;
+use crate::pages::{About, Home, Contact, Blog};
 
 // navbar router setup
 #[derive(Debug, Clone, Routable, PartialEq)]
