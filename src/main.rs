@@ -44,7 +44,7 @@ fn App() -> Element {
 #[component]
 fn MainLayout() -> Element {
     rsx! {
-        div { class: "h-screen flex flex-col",
+        div { class: "h-[100dvh] flex flex-col",
 
             // Navbar is inside Router, so Links work
             Navbar {}
