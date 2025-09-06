@@ -44,14 +44,36 @@ pub fn Navbar() -> Element {
 
         // mobile dropdown menu
         // mobile dropdown menu
-        if menu_open() {
-            div {
-                class: "md:hidden flex flex-col bg-blue-50 w-full p-2 border space-y-4 absolute top-12 z-50",
-                Link { class:"text-xl text-blue-950 text-center", to: Route::Home {}, "Home" },
-                Link { class:"text-xl text-blue-950 text-center", to: Route::Contact {}, "Contact" },
-                Link { class:"text-xl text-blue-950 text-center", to: Route::About {}, "About" },
-                Link { class:"text-xl text-blue-950 text-center", to: "https://github.com/t4g-at-pitt", new_tab: true, "Projects" },
-            }
-        }
+       // mobile dropdown menu
+if menu_open() {
+    div {
+        class: "md:hidden flex flex-col bg-blue-50 w-full p-2 border space-y-4 absolute top-12 z-50",
+        Link {
+            class:"text-xl text-blue-950 text-center",
+            to: Route::Home {},
+            onclick: move |_| menu_open.set(false),
+            "Home"
+        },
+        Link {
+            class:"text-xl text-blue-950 text-center",
+            to: Route::Contact {},
+            onclick: move |_| menu_open.set(false),
+            "Contact"
+        },
+        Link {
+            class:"text-xl text-blue-950 text-center",
+            to: Route::About {},
+            onclick: move |_| menu_open.set(false),
+            "About"
+        },
+        Link {
+            class:"text-xl text-blue-950 text-center",
+            to: "https://github.com/t4g-at-pitt",
+            new_tab: true,
+            onclick: move |_| menu_open.set(false),
+            "Projects"
+        },
+    }
+}
     }
 }
