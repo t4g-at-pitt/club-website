@@ -3,7 +3,7 @@ pub mod blog;
 pub mod about;
 pub mod contact;
 pub mod models;
-mod state;
+pub mod state;
 
 pub mod components;
 
