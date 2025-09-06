@@ -2,7 +2,7 @@ use dioxus::prelude::*;
 #[component]
 pub fn Footer() -> Element {
     rsx! {
-        div { class:"p-12 h-[40dvh] bg-green-200 flex justify-left items-center border-t",
+        div { class:"p-10 bg-green-100 flex justify-left items-center border-t",
             footer {
                 ul { class:"gap-y-1 flex flex-col w-fit",
                     h2 { class:"text-3xl mb-4 font-bold", "Connect with us!" }
@@ -26,7 +26,7 @@ pub fn Footer() -> Element {
                         a { class:"w-fit hover:cursor-pointer flex flex-row items-center text-xl font-medium hover:underline",
                             target:"_blank",
                             href:"https://discord.gg/7ZzZ7PmaXc",
-                            img { class:"mr-2 size-5", src:asset!("/assets/icons/discord2.svg") }
+                            img { class:"mr-2 size-5", src:asset!("/assets/icons/discord.svg") }
                             span { "Discord" }
                         }
                     }

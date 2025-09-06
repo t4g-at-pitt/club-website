@@ -15,7 +15,7 @@ pub fn EventList() -> Element {
             header {
             class: "mb-4",
             h1 {
-                class: "text-4xl font-bold text-gray-900 mb-4",
+                class: "text-left text-4xl font-bold text-gray-900 mb-4",
                 "Upcoming Events"
             }
             div { class: "flex space-x-4 text-sm text-gray-600",
