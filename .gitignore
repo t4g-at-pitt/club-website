@@ -9,3 +9,5 @@
 _deploy_tmp/
 /node_modules/
 node_modules
+assets/tailwind.css
+/assets/tailwind.css
