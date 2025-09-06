@@ -15,7 +15,7 @@ pub fn Navbar() -> Element {
     rsx! {
         div {
             id: "navbar",
-            class:"sticky top-0 z-10 p-2 xl:p-3 flex flex-row border-b bg-blue-100 border-gray-500 items-center justify-center",
+            class:"sticky top-0 z-10 p-2 flex flex-row border-b bg-blue-100 border-gray-500 items-center justify-center",
 
             // Main logo / title of navbar
             h1 { class:"mr-4 ml-2 text-3xl font-semibold text-black",

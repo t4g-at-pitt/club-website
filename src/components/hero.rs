@@ -8,12 +8,12 @@ pub fn Hero() -> Element {
     rsx! {
         // outer hero container
         div {
-            class: "overflow-x-hidden min-h-screen flex flex-col justify-center
+            class: "overflow-x-hidden min-h-[80vh] flex flex-col justify-center
                     bg-yellow-50
                     bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)]
                     bg-[size:6rem_4rem]",
 
-            div { class: "p-10 lg:p-16 flex flex-col md:flex-row justify-around items-center gap-y-8 md:gap-x-12 w-full",
+            div { class: "p-10 lg:p-16 flex flex-col md:flex-row justify-center items-center gap-y-8 md:gap-x-12 w-full",
 
                 // Left text column
                 div {
