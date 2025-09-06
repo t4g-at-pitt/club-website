@@ -2,7 +2,7 @@ use dioxus::prelude::*;
 #[component]
 pub fn Footer() -> Element {
     rsx! {
-        div { class:"p-10 bg-green-100 flex justify-left items-center border-t border-gray-500",
+        div { class:"p-10 bg-green-100 bg-[radial-gradient(theme(colors.blue.200)_1px,transparent_1px)] [background-size:16px_16px] flex justify-left items-center border-t border-gray-500",
             footer {
                 ul { class:"gap-y-1 flex flex-col w-fit",
                     h2 { class:"text-3xl mb-4 font-bold", "Connect with us!" }
