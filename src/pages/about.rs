@@ -1,57 +1,37 @@
+use crate::state::use_info_cards;
 use dioxus::core_macro::{component, rsx};
-use dioxus::dioxus_core::Element;
 use dioxus::prelude::*;
 
 #[component]
-pub fn About () -> Element {
+pub fn About() -> Element {
+    let info_cards = use_info_cards();
+
     rsx! {
-        div { class:"bg-yellow-50 h-full p-10",
-            div { class:"grid grid-cols-2 gap-4 justify-around",
+        div { class: "flex flex-col p-10 bg-yellow-50 h-full",
+            header {
+                class: "mb-6",
+                h1 {
+                    class: "text-4xl font-bold text-gray-900 mb-2",
+                    "About Our Club"
+                }
+                p {
+                    class: "text-gray-700 text-lg",
+                    "Learn more about what we do, how to get involved, and our ongoing projects."
+                }
+            }
 
-
-                div {
-                    class: "prose p-4 max-w-xs md:max-w-xl bg-white border rounded-xl shadow-sm hover:shadow-md transition-shadow",
-                    h1{
-                        "Our values"
-                    }
-                    p {
-                        "With a world of advancing technology, our club hopes to offer resources that align with  responsible techonolgoy."
-                    }
-                }
-                div {
-                    class: "prose p-4 max-w-xs md:max-w-xl bg-white border rounded-xl shadow-sm hover:shadow-md transition-shadow",
-                    h1{
-                        "Getting involved"
-                    }
-                    p {
-                        "Our club is open to all members of the Pitt community. \
-                        We host in-person meetings once a week, and provide online projects to contribute to year round. \
-                        Feel free to visit our next meeting to meet people and learn something new."
-                    }
-                }
-                div {
-                    class: "prose p-4 max-w-xs md:max-w-xl bg-white border rounded-xl shadow-sm hover:shadow-md transition-shadow",
-                    h1{
-                        "Research"
-                    }
-                    p {
-                        "Through workshops and online resources, T4G is a hub for resources related to getting involved with research and graduate school.\
-                        "
-                    }
-                }
-                div {
-                    class: "prose p-4 max-w-xs md:max-w-xl bg-white border rounded-xl shadow-sm hover:shadow-md transition-shadow",
-                    h1{
-                        "Projects"
-                    }
-                    p {
-                        "Our club hosts multiple repositories on GitHub, a platform for collaborating. \
-                         We offer ethical communitive projects that anyone can actively help design or code.
-                        "
+            main {
+                div { class: "grid grid-cols-1 md:grid-cols-2 gap-6",
+                    for card in info_cards.read().iter() {
+                        div {
+                            key: "{card.title()}",
+                            class: "prose p-4 max-w-xs md:max-w-xl bg-white border rounded-xl shadow-sm hover:shadow-md transition-shadow",
+                            h2 { "{card.title()}" }
+                            p { "{card.description()}" }
+                        }
                     }
                 }
             }
-            
         }
     }
 }
