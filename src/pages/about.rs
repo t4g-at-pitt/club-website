@@ -7,7 +7,7 @@ pub fn About() -> Element {
     let info_cards = use_info_cards();
 
     rsx! {
-        div { class: "flex flex-col p-10 bg-yellow-50 h-full",
+        div { class: "flex flex-col p-10 bg-yellow-50",
             header {
                 class: "mb-6",
                 h1 {
