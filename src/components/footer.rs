@@ -17,11 +17,11 @@ pub fn Footer() -> Element {
                     li {
                         a { class:"w-fit hover:cursor-pointer flex flex-row items-center text-xl font-medium hover:underline",
                             target:"_blank",
-                            alt:"T4G LinkedIn",
                             href:"https://www.linkedin.com/in/technology-for-good-at-pitt-924936347",
                             img {
                                 class:"mr-2 size-5",
-                                src:asset!("/assets/icons/linkedin.svg")
+                                src:asset!("/assets/icons/linkedin.svg"),
+                                alt:"T4G LinkedIn",
                             }
                             span { "LinkedIn" }
                         }
@@ -29,9 +29,13 @@ pub fn Footer() -> Element {
                     li {
                         a { class:"w-fit hover:cursor-pointer flex flex-row items-center text-xl font-medium hover:underline",
                             target:"_blank",
-                            alt:"T4G Instagram",
+
                             href:"https://www.instagram.com/t4g_at_pitt/",
-                            img { class:"mr-2 size-5", src:asset!("/assets/icons/instagram.svg") }
+                            img {
+                                class:"mr-2 size-5",
+                                alt:"T4G Instagram",
+                                src:asset!("/assets/icons/instagram.svg")
+                            }
                             span { "Instagram" }
                         }
                     }
@@ -39,17 +43,23 @@ pub fn Footer() -> Element {
                         a { class:"w-fit hover:cursor-pointer flex flex-row items-center text-xl font-medium hover:underline",
                             target:"_blank",
                             href:"https://discord.gg/7ZzZ7PmaXc",
-                            alt:"T4G Discord",
-                            img { class:"mr-2 size-5", src:asset!("/assets/icons/discord.svg") }
+                            img {
+                                class:"mr-2 size-5",
+                                alt:"T4G Discord",
+                                src:asset!("/assets/icons/discord.svg")
+                            }
                             span { "Discord" }
                         }
                     }
                     li {
                         a { class:"w-fit hover:cursor-pointer flex flex-row items-center text-xl font-medium hover:underline",
                             target:"_blank",
-                            alt:"T4G GitHub Organization",
                             href:"https://github.com/t4g-at-pitt",
-                            img { class:"mr-2 size-5", src:asset!("/assets/icons/github.svg") }
+                            img {
+                                class:"mr-2 size-5",
+                                alt:"T4G GitHub Organization",
+                                src:asset!("/assets/icons/github.svg")
+                            }
                             span { "GitHub" }
                         }
                     }
