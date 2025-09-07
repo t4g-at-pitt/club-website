@@ -27,7 +27,7 @@ pub fn Hero() -> Element {
                     bg-yellow-50
                     bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)]
                     bg-[size:6rem_4rem]",
-            style: "opacity: {opacity.get_value()}; transition: opacity 0.2s;",
+            style: "opacity: {opacity.get_value()}; transition: opacity 0.1s;",
 
             div { class: "p-10 lg:p-16 flex flex-col md:flex-row justify-center items-center gap-y-8 md:gap-x-12 w-full",
 
