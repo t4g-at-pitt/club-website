@@ -39,7 +39,7 @@ pub fn Hero() -> Element {
                         "Technology for Good"
                     }
                     h1 {
-                        class: "text-2xl font-medium text-gray-700 mb-3",
+                        class: "text-gray-700 text-lg mb-3",
                         "at the University of Pittsburgh"
                     }
                     p {

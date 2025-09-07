@@ -3,9 +3,9 @@ use dioxus::prelude::*;
 #[component]
 pub fn Form() -> Element {
     rsx! {
-        div { class:"flex flex-col gap-y-3 max-w-2xl mx-auto justify-center prose",
-            h1 { "Have any questions or suggestions?" }
-            h3 { "Feel free to contact our team here." }
+        div { class:"flex flex-col gap-y-3 max-w-2xl mx-auto justify-center",
+            h1 { class:"text-4xl font-bold text-gray-900 mb-2", "Have any questions or suggestions?" }
+            h3 { class:"text-gray-700 text-lg mb-3", "Feel free to contact our team here." }
             form {
                 class:"flex flex-col gap-y-3",
                 action: "https://api.web3forms.com/submit",
