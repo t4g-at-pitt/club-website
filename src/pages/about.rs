@@ -26,7 +26,7 @@ pub fn About() -> Element {
 
         // Container for both header and cards
         div {
-            class: "w-full max-w-5xl flex flex-col",
+            class: "w-full max-w-4xl md:max-w-6xl flex flex-col",
 
             // Header aligned with leftmost card
             header {
