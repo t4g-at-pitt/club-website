@@ -12,8 +12,8 @@ pub fn Footer() -> Element {
                         "source code"
                     }
                 }
+                h2 { class:"text-3xl mb-4 font-bold", "Connect with us!" }
                 ul { class:"gap-y-1 flex flex-col w-fit",
-                    h2 { class:"text-3xl mb-4 font-bold", "Connect with us!" }
                     li {
                         a { class:"w-fit hover:cursor-pointer flex flex-row items-center text-xl font-medium hover:underline",
                             target:"_blank",
