@@ -24,7 +24,7 @@ pub fn Navbar() -> Element {
 
             // desktop links
             div { class:"hidden md:flex ml-auto mr-2 space-x-4 items-center justify-center",
-                Link { class:"text-xl font-medium text-blue-950 hover:text-blue-700 transition-all duration-200", to: Route::Home {}, "Home" },
+Link { class:"text-xl font-medium text-blue-950 hover:text-blue-700 transition-all duration-200", to: Route::Home {}, "Home" },
                 Link { class:"text-xl font-medium text-blue-950 hover:text-blue-700 transition-all duration-200", to: Route::About {}, "About" },
                 Link { class:"text-xl font-medium text-blue-950 hover:text-blue-700 transition-all duration-200", to: Route::Contact {}, "Contact" },
                 Link { class:"text-xl font-medium text-blue-950 hover:text-blue-700 transition-all duration-200", to: "https://github.com/t4g-at-pitt", new_tab: true, "Projects" },
@@ -46,35 +46,39 @@ pub fn Navbar() -> Element {
         // mobile dropdown menu
         // mobile dropdown menu
        // mobile dropdown menu
-if menu_open() {
-    div {
-        class: "md:hidden flex flex-col bg-blue-50 w-full p-2 border space-y-4 absolute top-12 z-50",
-        Link {
-            class:"text-xl text-blue-950 text-center",
-            to: Route::Home {},
-            onclick: move |_| menu_open.set(false),
-            "Home"
-        },
-        Link {
-            class:"text-xl text-blue-950 text-center",
-            to: Route::Contact {},
-            onclick: move |_| menu_open.set(false),
-            "Contact"
-        },
-        Link {
-            class:"text-xl text-blue-950 text-center",
-            to: Route::About {},
-            onclick: move |_| menu_open.set(false),
-            "About"
-        },
-        Link {
-            class:"text-xl text-blue-950 text-center",
-            to: "https://github.com/t4g-at-pitt",
-            new_tab: true,
-            onclick: move |_| menu_open.set(false),
-            "Projects"
-        },
-    }
-}
+        if menu_open() {
+            div {
+                class: "items-center flex flex-col justify-center mx-auto space-x-2 md:hidden bg-blue-50 p-2 border w-full space-y-2 absolute top-13 z-50",
+
+                Link {
+                    class:"text-xl text-blue-950 text-center bg-blue-300 border-b-4 border-blue-500 w-fit px-2 rounded-xl",
+                    to: Route::Home {},
+                    onclick: move |_| menu_open.set(false),
+                    "Home"
+                },
+
+                Link {
+                    class:"text-xl text-blue-950 text-center bg-red-300 border-b-4 border-red-500 w-fit px-2 rounded-xl",
+                    to: Route::About {},
+                    onclick: move |_| menu_open.set(false),
+                    "About"
+                },
+
+                Link {
+                    class:"text-xl text-blue-950 text-center bg-yellow-300 border-b-4 border-yellow-500 w-fit px-2 rounded-xl",
+                    to: Route::Contact {},
+                    onclick: move |_| menu_open.set(false),
+                    "Contact"
+                },
+
+                Link {
+                    class:"text-xl text-blue-950 text-center bg-green-300 border-b-4 border-green-500 w-fit px-2 rounded-xl",
+                    to: "https://github.com/t4g-at-pitt",
+                    new_tab: true,
+                    onclick: move |_| menu_open.set(false),
+                    "Projects"
+                },
+            }
+        }
     }
 }
