@@ -4028,6 +4028,7 @@ dependencies = [
  "dioxus-motion",
  "serde",
  "serde_json",
+ "web-sys",
 ]
 
 [[package]]

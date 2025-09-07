@@ -31,7 +31,13 @@ fn main() {
 }
 
 #[component]
-fn App() -> Element {
+fn App() -> Element {use_effect(move || {
+    if let Some(doc) = web_sys::window().and_then(|w| w.document()) {
+        if let Some(html) = doc.document_element() {
+            html.set_attribute("lang", "en").unwrap();
+        }
+        }
+    });
     rsx! {
         document::Link { rel: "stylesheet", href: TAILWIND_CSS },
         document::Link{ rel: "favicon", href: FAV_ICON},
