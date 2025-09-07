@@ -36,6 +36,7 @@ pub fn Navbar() -> Element {
                 onclick: toggle_menu,
                 img {
                     class: "size-6",
+                    style: "width: 1.5rem;height: 1.5rem;",
                     src: asset!("assets/icons/menu-button.svg"),
                     alt: "Menu"
                 }
