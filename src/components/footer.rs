@@ -8,7 +8,11 @@ pub fn Footer() -> Element {
                 a {
                     href: "https://github.com/t4g-at-pitt/club-website",
                     target: "_blank",
-                    code { class:"text-sm absolute right-6 bottom-6 opacity-50 hover:opacity-80",
+
+                    code { class:"flex gap-x-2 text-sm absolute right-6 bottom-6 opacity-50 hover:opacity-80",
+                        img { class:"size-5",
+                            src:asset!("/assets/icons/code.svg"),
+                        }
                         "source code"
                     }
                 }
