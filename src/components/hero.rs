@@ -29,7 +29,7 @@ pub fn Hero() -> Element {
                     bg-[size:6rem_4rem]",
             style: "opacity: {opacity.get_value()}; transition: opacity 0.1s;",
 
-            div { class: "p-10 lg:p-16 flex flex-col md:flex-row justify-center items-center gap-y-8 md:gap-x-12 w-full",
+            div { class: "p-10 lg:p-16 flex flex-col lg:flex-row justify-center items-center gap-y-8 md:gap-x-12 lg:gap-x-16 xl:gap-x-24 mx-auto",
 
                 // Left text column
                 div {
