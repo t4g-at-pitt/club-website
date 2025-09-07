@@ -12,7 +12,7 @@ pub fn EventCard(event: EventWithId) -> Element {
     rsx! {
         div {
             key: "{event.id}",
-            class: "p-4 max-w-xs md:max-w-xl bg-white border rounded-xl flex flex-col shadow-sm hover:shadow-md transition-shadow",
+            class: "p-4 max-w-xs md:max-w-xl md:min-w-md bg-white border rounded-xl flex flex-col shadow-sm hover:shadow-md transition-shadow",
 
             div { class: "flex items-center justify-between mb-2",
                 strong { class: "text-lg font-semibold text-gray-900",
