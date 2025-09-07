@@ -21,7 +21,7 @@ pub fn About() -> Element {
 
     rsx! {
     div {
-        class: "flex flex-col items-center p-10 min-h-[100dvh] bg-yellow-50 bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:6rem_4rem]",
+        class: "flex flex-col items-center p-10 min-h-[100dvh]",
         style: "opacity: {opacity.get_value()}; transition: opacity 0.1s;",
 
         // Container for both header and cards

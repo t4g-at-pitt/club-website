@@ -23,10 +23,7 @@ pub fn Hero() -> Element {
     rsx! {
         // outer hero container
         div {
-            class: "overflow-x-hidden min-h-[80vh] flex flex-col justify-center
-                    bg-yellow-50
-                    bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)]
-                    bg-[size:6rem_4rem]",
+            class: "overflow-x-hidden min-h-[80vh] flex flex-col justify-center",
             style: "opacity: {opacity.get_value()}; transition: opacity 0.1s;",
 
             div { class: "p-10 lg:p-16 flex flex-col lg:flex-row justify-center items-center gap-y-8 md:gap-x-12 lg:gap-x-16 xl:gap-x-24 mx-auto",

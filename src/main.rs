@@ -50,7 +50,14 @@ fn App() -> Element {use_effect(move || {
 #[component]
 fn MainLayout() -> Element {
     rsx! {
-        div { class: "h-[100dvh] flex flex-col",
+        div {
+            class:
+            "
+                 h-[100dvh] flex flex-col
+                 bg-yellow-50
+                 bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)]
+                 bg-[size:6rem_4rem]
+            ",
 
             // Navbar is inside Router, so Links work
             Navbar {}

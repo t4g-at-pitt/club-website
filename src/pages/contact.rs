@@ -20,7 +20,7 @@ pub fn Contact () -> Element {
     });
     rsx! {
         div {
-            class:"p-10 h-[110dvh] w-full bg-yellow-50 bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:6rem_4rem]",
+            class:"p-10 h-[110dvh] w-full",
             style: "opacity: {opacity.get_value()}; transition: opacity 0.1s;",
             Form {}
         }
