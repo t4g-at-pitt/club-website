@@ -21,7 +21,7 @@ pub fn Footer() -> Element {
                     li {
                         a { class:"w-fit hover:cursor-pointer flex flex-row items-center text-xl font-medium hover:underline",
                             target:"_blank",
-                            href:"https://www.linkedin.com/in/technology-for-good-at-pitt-924936347",
+                            href:"https://www.linkedin.com/company/technology-for-good-at-pitt",
                             img {
                                 class:"mr-2 size-5",
                                 src:asset!("/assets/icons/linkedin.svg"),
