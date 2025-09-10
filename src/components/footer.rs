@@ -11,7 +11,7 @@ pub fn Footer() -> Element {
 
                     code { class:"flex gap-x-2 text-sm absolute right-6 bottom-6 opacity-50 hover:opacity-80",
                         img { class:"size-5",
-                            src:asset!("/assets/icons/code.svg"),
+                            src:asset!("/assets/icons/code.svg", ImageAssetOptions::new().with_avif()),
                         }
                         "source code"
                     }
@@ -24,7 +24,7 @@ pub fn Footer() -> Element {
                             href:"https://www.linkedin.com/company/technology-for-good-at-pitt",
                             img {
                                 class:"mr-2 size-5",
-                                src:asset!("/assets/icons/linkedin.svg"),
+                                src:asset!("/assets/icons/linkedin.svg", ImageAssetOptions::new().with_avif()),
                                 alt:"T4G LinkedIn",
                             }
                             span { "LinkedIn" }
@@ -38,7 +38,7 @@ pub fn Footer() -> Element {
                             img {
                                 class:"mr-2 size-5",
                                 alt:"T4G Instagram",
-                                src:asset!("/assets/icons/instagram.svg")
+                                src:asset!("/assets/icons/instagram.svg", ImageAssetOptions::new().with_avif())
                             }
                             span { "Instagram" }
                         }
@@ -50,7 +50,7 @@ pub fn Footer() -> Element {
                             img {
                                 class:"mr-2 size-5",
                                 alt:"T4G Discord",
-                                src:asset!("/assets/icons/discord.svg")
+                                src:asset!("/assets/icons/discord.svg", ImageAssetOptions::new().with_avif())
                             }
                             span { "Discord" }
                         }
@@ -62,7 +62,7 @@ pub fn Footer() -> Element {
                             img {
                                 class:"mr-2 size-5",
                                 alt:"T4G GitHub Organization",
-                                src:asset!("/assets/icons/github.svg")
+                                src:asset!("/assets/icons/github.svg", ImageAssetOptions::new().with_avif())
                             }
                             span { "GitHub" }
                         }

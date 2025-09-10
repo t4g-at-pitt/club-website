@@ -23,7 +23,7 @@ enum Route {
         Blog { id: i32 },
 }
 
-const TAILWIND_CSS: Asset = asset!("/assets/tailwind.css");
+const TAILWIND_CSS: Asset = asset!("/assets/tailwind.css", CssAssetOptions::new().with_preload(true));
 const FAV_ICON: Asset = asset!("/assets/favicon.ico");
 
 fn main() {
