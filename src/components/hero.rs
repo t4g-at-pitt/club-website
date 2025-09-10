@@ -26,7 +26,7 @@ pub fn Hero() -> Element {
             class: "overflow-x-hidden min-h-[80vh] flex flex-col justify-center",
             style: "opacity: {opacity.get_value()}; transition: opacity 0.1s;",
 
-            div { class: "p-10 lg:p-16 flex flex-col lg:flex-row justify-center items-center gap-y-8 md:gap-x-12 lg:gap-x-16 xl:gap-x-24 mx-auto",
+            div { class: "items-start p-10 lg:p-16 flex flex-col lg:flex-row justify-center items-center gap-y-8 md:gap-x-12 lg:gap-x-16 xl:gap-x-24 mx-auto",
 
                 // Left text column
                 div {
@@ -59,7 +59,7 @@ pub fn Hero() -> Element {
                 }
 
                 // Right event list
-                div { class:"w-full max-w-3xl",
+                div { class:"w-full max-w-3xl align-top",
                     EventList {}
                 }
             }
