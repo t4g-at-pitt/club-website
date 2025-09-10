@@ -24,10 +24,10 @@ pub fn Navbar() -> Element {
 
             // desktop links
             div { class:"hidden md:flex ml-auto mr-2 space-x-4 items-center justify-center",
-Link { class:"text-xl font-medium text-blue-950 hover:text-blue-700 transition-all duration-200", to: Route::Home {}, "Home" },
-                Link { class:"text-xl font-medium text-blue-950 hover:text-blue-700 transition-all duration-200", to: Route::About {}, "About" },
-                Link { class:"text-xl font-medium text-blue-950 hover:text-blue-700 transition-all duration-200", to: Route::Contact {}, "Contact" },
-                Link { class:"text-xl font-medium text-blue-950 hover:text-blue-700 transition-all duration-200", to: "https://github.com/t4g-at-pitt", new_tab: true, "Projects" },
+Link { class:"text-xl font-medium text-blue-950 hover:text-sky-600 transition-all duration-200", to: Route::Home {}, "Home" },
+                Link { class:"text-xl font-medium text-blue-950 hover:text-sky-600 transition-all duration-200", to: Route::About {}, "About" },
+                Link { class:"text-xl font-medium text-blue-950 hover:text-sky-600 transition-all duration-200", to: Route::Contact {}, "Contact" },
+                Link { class:"text-xl font-medium text-blue-950 hover:text-sky-600 transition-all duration-200", to: "https://github.com/t4g-at-pitt", new_tab: true, "Projects" },
             }
 
             // mobile menu button
