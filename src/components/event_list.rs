@@ -15,10 +15,10 @@ pub fn EventList() -> Element {
             header {
             class: "mb-4",
             h1 {
-                class: "text-left text-4xl font-bold text-gray-900 mb-4",
+                class: "text-left text-5xl font-bold text-gray-900 mb-4",
                 "Upcoming Events"
             }
-            div { class: "flex space-x-4 text-sm text-gray-600",
+            div { class: "flex space-x-4 text-md text-gray-600",
                 span {
                     "🗓️ {upcoming_count} scheduled"
                 }
@@ -92,7 +92,7 @@ fn EventListSeparated() -> Element {
             // Upcoming Events Section
             {(!upcoming_events.is_empty()).then(|| rsx! {
                 section {
-                    h2 { class: "text-2xl font-semibold text-gray-800 mb-4",
+                    h2 { class: "text-3xl font-semibold text-gray-800 mb-4",
                         "Scheduled Events"
                     }
                     div { class: "flex flex-col space-y-4",

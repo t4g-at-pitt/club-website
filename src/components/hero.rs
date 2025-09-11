@@ -32,11 +32,11 @@ pub fn Hero() -> Element {
                 div {
                     class: "flex flex-col max-w-sm lg:max-w-xl prose-stone",
                     h1 {
-                        class: "text-4xl font-bold text-gray-900 mb-2",
+                        class: "text-5xl font-bold text-gray-900 mb-2",
                         "Technology for Good"
                     }
                     h1 {
-                        class: "text-gray-700 text-lg mb-3",
+                        class: "text-gray-700 text-xl mb-3",
                         "at the University of Pittsburgh"
                     }
                     p {
