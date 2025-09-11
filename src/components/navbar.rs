@@ -37,7 +37,7 @@ Link { class:"text-xl font-medium text-blue-950 hover:text-sky-600 transition-al
                 img {
                     class: "size-6",
                     style: "width: 1.5rem;height: 1.5rem;",
-                    src: asset!("assets/icons/menu-button.svg", ImageAssetOptions::new().with_avif()),
+                    src: asset!("assets/icons/menu-button.svg"),
                     alt: "Menu"
                 }
             }
