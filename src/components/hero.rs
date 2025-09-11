@@ -45,7 +45,7 @@ pub fn Hero() -> Element {
                         "The organization ",
                         span { class: "font-bold text-gray-900", "Technology for Good (T4G)" },
                         " is dedicated to growing the ",
-                        span { class: "font-semibold text-indigo-600", "responsible technology community" },
+                        span { class: "font-semibold", "responsible technology community" },
                         " through learning, ",
                         span { class: "font-semibold", "career growth" },
                         ", and ",
@@ -53,7 +53,7 @@ pub fn Hero() -> Element {
                         ". The organization hosts events centered on ",
                         span { class: "italic", "hands-on development" },
                         ", understanding the ",
-                        span { class: "underline text-indigo-500", "responsible technology landscape" },
+                        span { class: "underline", "responsible technology landscape" },
                         ", and better understanding of research and graduate school opportunities. 🚀💡"
                     }
                 }

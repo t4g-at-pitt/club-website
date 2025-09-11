@@ -15,7 +15,7 @@ pub fn EventCard(event: EventWithId) -> Element {
             class: "p-4 max-w-xs md:max-w-xl md:min-w-md bg-white border rounded-xl flex flex-col shadow-sm hover:shadow-md transition-shadow",
 
             div { class: "flex items-center justify-between mb-2",
-                strong { class: "text-lg font-semibold text-gray-900",
+                strong { class: "text-xl font-semibold text-gray-900",
                     "{event.name()}"
                 }
                 {event.is_tba().then(|| rsx! {
